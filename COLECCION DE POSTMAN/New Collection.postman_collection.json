@@ -1,0 +1,120 @@
+{
+    "info": {
+        "name": "API Kanban",
+        "description": "Colección de API para gestionar tareas en un sistema Kanban.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Obtener todas las tareas",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8001/tasks/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8001",
+                    "path": [
+                        "tasks"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Crear una tarea",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Nueva Tarea\", \"description\": \"Descripción de la nueva tarea\", \"status\": \"pendiente\", \"assignee\": \"Usuario\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8001/tasks/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8001",
+                    "path": [
+                        "tasks"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Actualizar una tarea",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Tarea Actualizada\", \"description\": \"Descripción actualizada\", \"status\": \"en_progreso\", \"assignee\": \"Usuario\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8001/tasks/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8001",
+                    "path": [
+                        "tasks",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Eliminar una tarea",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8001/tasks/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8001",
+                    "path": [
+                        "tasks",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Obtener tarea por ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8001/tasks/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8001",
+                    "path": [
+                        "tasks",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
